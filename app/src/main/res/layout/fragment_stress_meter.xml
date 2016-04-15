@@ -3,11 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.yuzhong.stressmeter.StressMeterFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_gravity="center_horizontal" >
+        
+        <TextView android:id="@+id/hinttext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="20dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:text="Touch the image that best captures how stressed you feel right now"/>
+
+        <!-- TODO: Update blank fragment layout -->
+        <GridView android:id="@+id/gridview"
+            android:layout_width="1280px"
+            android:layout_height="1280px"
+            android:columnWidth="320px"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/hinttext"
+            android:layout_marginBottom="20dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"/>
+
+        <Button android:id="@+id/changepictures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:text="MORE IMAGES"/>
+
+    </RelativeLayout>
 
 </FrameLayout>
