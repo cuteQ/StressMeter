@@ -20,6 +20,5 @@ public class EMAAlarmReceiver extends BroadcastReceiver {
         Intent emaIntent = new Intent(context, MainActivity.class); //The activity you  want to start.
         emaIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(emaIntent);
-
     }
 }
